@@ -1,0 +1,925 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="
+		http://www.liquibase.org/xml/ns/dbchangelog 
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
+		
+    <changeSet author="harold (generated)" id="1551726883486-4">
+        <insert tableName="categoria_persona">
+            <column name="id" valueNumeric="1"/>
+            <column name="codigo_categoria_persona" value="cp001"/>
+            <column name="nombre_categoria_persona" value="Cliente"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-26T20:32:56.603"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="categoria_persona">
+            <column name="id" valueNumeric="2"/>
+            <column name="codigo_categoria_persona" value="cp002"/>
+            <column name="nombre_categoria_persona" value="Proveedor"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-26T20:32:56.603"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="categoria_persona">
+            <column name="id" valueNumeric="3"/>
+            <column name="codigo_categoria_persona" value="cp003"/>
+            <column name="nombre_categoria_persona" value="Vendedor"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-26T20:32:56.603"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="categoria_persona">
+            <column name="id" valueNumeric="4"/>
+            <column name="codigo_categoria_persona" value="cp004"/>
+            <column name="nombre_categoria_persona" value="Representante"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-26T20:32:56.603"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="categoria_persona">
+            <column name="id" valueNumeric="5"/>
+            <column name="codigo_categoria_persona" value="cp005"/>
+            <column name="nombre_categoria_persona" value="Acreedor"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-26T20:32:56.603"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="categoria_persona">
+            <column name="id" valueNumeric="6"/>
+            <column name="codigo_categoria_persona" value="cp006"/>
+            <column name="nombre_categoria_persona" value="Padre"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-26T20:32:56.603"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="categoria_persona">
+            <column name="id" valueNumeric="7"/>
+            <column name="codigo_categoria_persona" value="cp007"/>
+            <column name="nombre_categoria_persona" value="Madre"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-26T20:32:56.603"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="categoria_persona">
+            <column name="id" valueNumeric="8"/>
+            <column name="codigo_categoria_persona" value="cp008"/>
+            <column name="nombre_categoria_persona" value="Seguro"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-26T20:32:56.603"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="categoria_persona">
+            <column name="id" valueNumeric="9"/>
+            <column name="codigo_categoria_persona" value="cp009"/>
+            <column name="nombre_categoria_persona" value="Doctor"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-26T20:32:56.603"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="categoria_persona">
+            <column name="id" valueNumeric="10"/>
+            <column name="codigo_categoria_persona" value="cp010"/>
+            <column name="nombre_categoria_persona" value="Empleado"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-26T20:32:56.603"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="categoria_persona">
+            <column name="id" valueNumeric="11"/>
+            <column name="codigo_categoria_persona" value="cp011"/>
+            <column name="nombre_categoria_persona" value="Transcriptor"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-26T20:32:56.603"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726883486-51">
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="1000"/>
+            <column name="codigo_ubicacion_geografica" value="ZZ"/>
+            <column name="nombre_ubicacion_geografica" value="Otro"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="ZZZ"/>
+            <column name="zona_horaria_ubicacion_geografica"/>
+            <column name="codigo_telefono_ubicacion_geografica"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T03:08:23.258"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="1"/>
+            <column name="codigo_ubicacion_geografica" value="AD"/>
+            <column name="nombre_ubicacion_geografica" value="Andorra"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="AND"/>
+            <column name="zona_horaria_ubicacion_geografica" value="Europe/Andorra"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+376"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T02:57:31.601"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="2"/>
+            <column name="codigo_ubicacion_geografica" value="AR"/>
+            <column name="nombre_ubicacion_geografica" value="Argentina"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="ARG"/>
+            <column name="zona_horaria_ubicacion_geografica" value="America/Argentina/Buenos_Aires"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+54"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T02:57:57.018"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="3"/>
+            <column name="codigo_ubicacion_geografica" value="BZ"/>
+            <column name="nombre_ubicacion_geografica" value="Belice"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="BLZ"/>
+            <column name="zona_horaria_ubicacion_geografica" value="America/Belize"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+501"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T02:59:04.339"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="4"/>
+            <column name="codigo_ubicacion_geografica" value="BO"/>
+            <column name="nombre_ubicacion_geografica" value="Bolivia"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="BOL"/>
+            <column name="zona_horaria_ubicacion_geografica" value="America/La_Paz"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+591"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T02:59:21.756"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="5"/>
+            <column name="codigo_ubicacion_geografica" value="BR"/>
+            <column name="nombre_ubicacion_geografica" value="Brasil"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="BRA"/>
+            <column name="zona_horaria_ubicacion_geografica" value="America/Sao_Paulo"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+55"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T02:59:55.504"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="6"/>
+            <column name="codigo_ubicacion_geografica" value="CL"/>
+            <column name="nombre_ubicacion_geografica" value="Chile"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="CHL"/>
+            <column name="zona_horaria_ubicacion_geografica" value="America/Santiago"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+56"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T03:00:15.604"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="7"/>
+            <column name="codigo_ubicacion_geografica" value="CO"/>
+            <column name="nombre_ubicacion_geografica" value="Colombia"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="COL"/>
+            <column name="zona_horaria_ubicacion_geografica" value="America/Bogota"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+57"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T03:00:35.157"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="8"/>
+            <column name="codigo_ubicacion_geografica" value="CR"/>
+            <column name="nombre_ubicacion_geografica" value="Costa Rica"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="CRI"/>
+            <column name="zona_horaria_ubicacion_geografica" value="America/Costa_Rica"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+506"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T03:00:54.484"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="9"/>
+            <column name="codigo_ubicacion_geografica" value="CU"/>
+            <column name="nombre_ubicacion_geografica" value="Cuba"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="CUB"/>
+            <column name="zona_horaria_ubicacion_geografica" value="Cuba"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+53"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T03:01:11.55"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="10"/>
+            <column name="codigo_ubicacion_geografica" value="EC"/>
+            <column name="nombre_ubicacion_geografica" value="Ecuador"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="ECU"/>
+            <column name="zona_horaria_ubicacion_geografica" value="GMT-5:00"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+593"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T03:01:34.376"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="11"/>
+            <column name="codigo_ubicacion_geografica" value="SV"/>
+            <column name="nombre_ubicacion_geografica" value="El Salvador"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="SLV"/>
+            <column name="zona_horaria_ubicacion_geografica" value="America/El_Salvador"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+503"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T03:01:49.721"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="12"/>
+            <column name="codigo_ubicacion_geografica" value="ES"/>
+            <column name="nombre_ubicacion_geografica" value="España"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="ESP"/>
+            <column name="zona_horaria_ubicacion_geografica" value="Europe/Madrid"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+34"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T03:02:08.841"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="13"/>
+            <column name="codigo_ubicacion_geografica" value="US"/>
+            <column name="nombre_ubicacion_geografica" value="Estados Unidos de América"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="USA"/>
+            <column name="zona_horaria_ubicacion_geografica" value="America/New_York"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+1"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T03:02:42.44"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="14"/>
+            <column name="codigo_ubicacion_geografica" value="GT"/>
+            <column name="nombre_ubicacion_geografica" value="Guatemala"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="GTM"/>
+            <column name="zona_horaria_ubicacion_geografica" value="America/Guatemala"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+502"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T03:03:08.412"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="16"/>
+            <column name="codigo_ubicacion_geografica" value="HN"/>
+            <column name="nombre_ubicacion_geografica" value="Honduras"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="HND"/>
+            <column name="zona_horaria_ubicacion_geografica" value="America/Tegucigalpa"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+504"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T03:03:53.375"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="17"/>
+            <column name="codigo_ubicacion_geografica" value="MX"/>
+            <column name="nombre_ubicacion_geografica" value="México"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="MEX"/>
+            <column name="zona_horaria_ubicacion_geografica" value="Mexico/General"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+52"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T03:04:16.66"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="18"/>
+            <column name="codigo_ubicacion_geografica" value="NI"/>
+            <column name="nombre_ubicacion_geografica" value="Nicaragua"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="NIC"/>
+            <column name="zona_horaria_ubicacion_geografica" value="America/Managua"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+505"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T03:04:37.101"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="19"/>
+            <column name="codigo_ubicacion_geografica" value="PA"/>
+            <column name="nombre_ubicacion_geografica" value="Panamá"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="PAN"/>
+            <column name="zona_horaria_ubicacion_geografica" value="America/Panama"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+507"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T03:04:55.888"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="20"/>
+            <column name="codigo_ubicacion_geografica" value="PY"/>
+            <column name="nombre_ubicacion_geografica" value="Paraguay"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="PRY"/>
+            <column name="zona_horaria_ubicacion_geografica" value="America/Asuncion"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+595"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T03:05:17.039"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="21"/>
+            <column name="codigo_ubicacion_geografica" value="PE"/>
+            <column name="nombre_ubicacion_geografica" value="Perú"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="PER"/>
+            <column name="zona_horaria_ubicacion_geografica" value="America/Lima"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+51"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T03:05:37.432"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="22"/>
+            <column name="codigo_ubicacion_geografica" value="PR"/>
+            <column name="nombre_ubicacion_geografica" value="Puerto Rico"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="PRI"/>
+            <column name="zona_horaria_ubicacion_geografica" value="America/Puerto_Rico"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+1"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T03:05:57.334"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="23"/>
+            <column name="codigo_ubicacion_geografica" value="DO"/>
+            <column name="nombre_ubicacion_geografica" value="República Dominicana"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="DOM"/>
+            <column name="zona_horaria_ubicacion_geografica" value="America/Santo_Domingo"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+1"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T03:06:20.595"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="24"/>
+            <column name="codigo_ubicacion_geografica" value="UY"/>
+            <column name="nombre_ubicacion_geografica" value="Uruguay"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="URY"/>
+            <column name="zona_horaria_ubicacion_geografica" value="America/Montevideo"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+598"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T03:07:18.643"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="25"/>
+            <column name="codigo_ubicacion_geografica" value="VE"/>
+            <column name="nombre_ubicacion_geografica" value="Venezuela"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="VEN"/>
+            <column name="zona_horaria_ubicacion_geografica" value="America/Caracas"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+58"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="id_ubicacion_geografica_superior"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-03-04T03:08:09.977"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="ubicacion_geografica">
+            <column name="id" valueNumeric="27"/>
+            <column name="codigo_ubicacion_geografica" value="FR"/>
+            <column name="nombre_ubicacion_geografica" value="Francia"/>
+            <column name="nombre_abreviado_ubicacion_geografica" value="FRA"/>
+            <column name="zona_horaria_ubicacion_geografica" value="Europe/Paris"/>
+            <column name="codigo_telefono_ubicacion_geografica" value="+33"/>
+            <column name="formato_telefono_ubicacion_geografica"/>
+            <column name="language" value="fr"/>
+            <column name="id_ubicacion_geografica_superior" />
+            <column name="usuario_creacion" value="postgres" />
+            <column name="fecha_creacion" valueDate="2015-03-04T03:03:53.375" />
+            <column name="usuario_modificacion" />
+            <column name="fecha_modificacion" />
+            <column name="version" valueNumeric="0"/>
+        </insert>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726883486-9">
+        <insert tableName="distintivo_persona">
+            <column name="id" valueNumeric="1"/>
+            <column name="codigo_distintivo_persona" value="d001"/>
+            <column name="nombre_distintivo_persona" value="Sr."/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:23:56.701"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="distintivo_persona">
+            <column name="id" valueNumeric="2"/>
+            <column name="codigo_distintivo_persona" value="d002"/>
+            <column name="nombre_distintivo_persona" value="Sra."/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:23:56.701"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="distintivo_persona">
+            <column name="id" valueNumeric="3"/>
+            <column name="codigo_distintivo_persona" value="d003"/>
+            <column name="nombre_distintivo_persona" value="Srta."/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:23:56.701"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="distintivo_persona">
+            <column name="id" valueNumeric="4"/>
+            <column name="codigo_distintivo_persona" value="d004"/>
+            <column name="nombre_distintivo_persona" value="Dr."/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:23:56.701"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="distintivo_persona">
+            <column name="id" valueNumeric="5"/>
+            <column name="codigo_distintivo_persona" value="d005"/>
+            <column name="nombre_distintivo_persona" value="Dra."/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:23:56.701"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="distintivo_persona">
+            <column name="id" valueNumeric="6"/>
+            <column name="codigo_distintivo_persona" value="d006"/>
+            <column name="nombre_distintivo_persona" value="Lic."/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:23:56.701"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726883486-12">
+        <insert tableName="estado_civil">
+            <column name="id" valueNumeric="1"/>
+            <column name="codigo_estado_civil" value="ec001"/>
+            <column name="nombre_estado_civil" value="Soltero(a)"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:21:44.421"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="estado_civil">
+            <column name="id" valueNumeric="2"/>
+            <column name="codigo_estado_civil" value="ec002"/>
+            <column name="nombre_estado_civil" value="Casado(a)"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:21:50.796"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="estado_civil">
+            <column name="id" valueNumeric="3"/>
+            <column name="codigo_estado_civil" value="ec003"/>
+            <column name="nombre_estado_civil" value="Viudo(a)"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:21:59.309"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="estado_civil">
+            <column name="id" valueNumeric="4"/>
+            <column name="codigo_estado_civil" value="ec004"/>
+            <column name="nombre_estado_civil" value="Divorciado(a)"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:25:08.988"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="estado_civil">
+            <column name="id" valueNumeric="5"/>
+            <column name="codigo_estado_civil" value="ec005"/>
+            <column name="nombre_estado_civil" value="Concubino(a)"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:25:14.659"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="estado_civil">
+            <column name="id" valueNumeric="6"/>
+            <column name="codigo_estado_civil" value="ec006"/>
+            <column name="nombre_estado_civil" value="Otro"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:25:22.848"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+    </changeSet>
+    
+    <changeSet author="Harold Da Costa" id="01112019-022">
+        <insert tableName="oauth_client_details">
+            <column name="client_id" value="clientIdPassword" />
+<!--             <column name="resource_ids" value="" /> -->
+            <column name="client_secret" value="{noop}" />
+            <column name="scope" value="read,write,trust" />
+            <column name="authorized_grant_types" value="password,refresh_token,client_credentials,authorization_code" />
+            <column name="web_server_redirect_uri" value="http://healdocs.com:7676/person/login,http://localhost:7676/person/login" />
+            <column name="authorities" value="ROLE_CLIENT,ROLE_TRUSTED_CLIENT" />
+            <column name="access_token_validity" value="28800" />
+            <column name="refresh_token_validity" value="28800" />
+<!--             <column name="additional_information" value="VARCHAR(4096)" /> -->
+            <column name="autoapprove" value="true" />
+            <column name="map_to_backend_id" value="generico" />
+            <column name="backend_access_token" value="f62b6872fb72974d166315d468777ff0" />
+        </insert>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726883486-25">
+        <insert tableName="opcion_sino">
+            <column name="id" valueNumeric="1"/>
+            <column name="codigo_opcion_sino" value="osn001"/>
+            <column name="nombre_opcion_sino" value="Si"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:29:12.139"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="opcion_sino">
+            <column name="id" valueNumeric="2"/>
+            <column name="codigo_opcion_sino" value="osn002"/>
+            <column name="nombre_opcion_sino" value="No"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:29:20.188"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726883486-47">
+        <insert tableName="tipo_sangre">
+            <column name="id" valueNumeric="1"/>
+            <column name="codigo_tipo_sangre" value="ts001"/>
+            <column name="nombre_tipo_sangre" value="AB+"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:33:18.96"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="tipo_sangre">
+            <column name="id" valueNumeric="2"/>
+            <column name="codigo_tipo_sangre" value="ts002"/>
+            <column name="nombre_tipo_sangre" value="AB-"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:33:24.216"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="tipo_sangre">
+            <column name="id" valueNumeric="3"/>
+            <column name="codigo_tipo_sangre" value="ts003"/>
+            <column name="nombre_tipo_sangre" value="A+"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:33:28.724"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="tipo_sangre">
+            <column name="id" valueNumeric="4"/>
+            <column name="codigo_tipo_sangre" value="ts004"/>
+            <column name="nombre_tipo_sangre" value="A-"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:33:33.325"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="tipo_sangre">
+            <column name="id" valueNumeric="5"/>
+            <column name="codigo_tipo_sangre" value="ts005"/>
+            <column name="nombre_tipo_sangre" value="B+"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:33:38.001"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="tipo_sangre">
+            <column name="id" valueNumeric="6"/>
+            <column name="codigo_tipo_sangre" value="ts006"/>
+            <column name="nombre_tipo_sangre" value="B-"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:33:44.729"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="tipo_sangre">
+            <column name="id" valueNumeric="7"/>
+            <column name="codigo_tipo_sangre" value="ts007"/>
+            <column name="nombre_tipo_sangre" value="O+"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:33:49.811"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="tipo_sangre">
+            <column name="id" valueNumeric="8"/>
+            <column name="codigo_tipo_sangre" value="ts008"/>
+            <column name="nombre_tipo_sangre" value="O-"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:33:56.442"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726883486-35">
+        <insert tableName="sexo">
+            <column name="id" valueNumeric="1"/>
+            <column name="codigo_sexo" value="s001"/>
+            <column name="nombre_sexo" value="Masculino"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:31:41.616"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="sexo">
+            <column name="id" valueNumeric="2"/>
+            <column name="codigo_sexo" value="s002"/>
+            <column name="nombre_sexo" value="Femenino"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:31:46.731"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726883486-43">
+        <insert tableName="tipo_organizacion">
+            <column name="id" valueNumeric="1"/>
+            <column name="codigo_tipo_organizacion" value="to001"/>
+            <column name="nombre_tipo_organizacion" value="N"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:32:56.603"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="tipo_organizacion">
+            <column name="id" valueNumeric="2"/>
+            <column name="codigo_tipo_organizacion" value="to002"/>
+            <column name="nombre_tipo_organizacion" value="J"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:33:01.393"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="tipo_organizacion">
+            <column name="id" valueNumeric="3"/>
+            <column name="codigo_tipo_organizacion" value="to003"/>
+            <column name="nombre_tipo_organizacion" value="G"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:33:01.393"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="tipo_organizacion">
+            <column name="id" valueNumeric="4"/>
+            <column name="codigo_tipo_organizacion" value="to004"/>
+            <column name="nombre_tipo_organizacion" value="V"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:32:56.603"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="tipo_organizacion">
+            <column name="id" valueNumeric="5"/>
+            <column name="codigo_tipo_organizacion" value="to005"/>
+            <column name="nombre_tipo_organizacion" value="E"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:33:01.393"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="tipo_organizacion">
+            <column name="id" valueNumeric="6"/>
+            <column name="codigo_tipo_organizacion" value="to006"/>
+            <column name="nombre_tipo_organizacion" value="P"/>
+            <column name="usuario_creacion" value="gvtmain"/>
+            <column name="fecha_creacion" valueDate="2008-05-15T20:33:01.393"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+    </changeSet>
+    
+    <changeSet author="hdacostac" id="29102020-2">
+	    <insert tableName="tipo_documento_identificacion">
+            <column name="id" valueNumeric="1"/>
+            <column name="codigo_tipo_documento_identificacion" value="td001"/>
+            <column name="nombre_tipo_documento_identificacion" value="DNI"/>
+            <column name="id_ubicacion_geografica" value="12"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2020-10-28T00:00:00"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="tipo_documento_identificacion">
+            <column name="id" valueNumeric="2"/>
+            <column name="codigo_tipo_documento_identificacion" value="td002"/>
+            <column name="nombre_tipo_documento_identificacion" value="NIE"/>
+            <column name="id_ubicacion_geografica" value="12"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2020-10-28T00:00:00"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="tipo_documento_identificacion">
+            <column name="id" valueNumeric="3"/>
+            <column name="codigo_tipo_documento_identificacion" value="td003"/>
+            <column name="nombre_tipo_documento_identificacion" value="Carnet conducir"/>
+            <column name="id_ubicacion_geografica" value="12"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2020-10-28T00:00:00"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+        <insert tableName="tipo_documento_identificacion">
+            <column name="id" valueNumeric="4"/>
+            <column name="codigo_tipo_documento_identificacion" value="td004"/>
+            <column name="nombre_tipo_documento_identificacion" value="Pasaporte"/>
+            <column name="id_ubicacion_geografica" value="12"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2020-10-28T00:00:00"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+	</changeSet>
+	
+	<changeSet author="hdacostac" id="29102020-3">
+		<insert tableName="tipo_documento_identificacion">
+            <column name="id" valueNumeric="10"/>
+            <column name="codigo_tipo_documento_identificacion" value="td010"/>
+            <column name="nombre_tipo_documento_identificacion" value="CNI"/>
+            <column name="id_ubicacion_geografica" value="27"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2020-10-28T00:00:00"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+	</changeSet>
+	
+	<changeSet author="harold (generated)" id="1551726883486-33">
+        <insert tableName="rol">
+            <column name="id" valueNumeric="50"/>
+            <column name="codigo_rol" value="add_money"/>
+            <column name="nombre_rol" value="Add money to wallet"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-01-19T15:54:58.82"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+    </changeSet>
+    
+</databaseChangeLog>

@@ -1,0 +1,808 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="
+		http://www.liquibase.org/xml/ns/dbchangelog 
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
+
+    <changeSet author="harold (generated)" id="1551726869721-1">
+        <createSequence sequenceName="hibernate_sequence"/>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726869721-134">
+        <createTable tableName="categoria_persona">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_categoria_persona"/>
+            </column>
+            <column name="codigo_categoria_persona" type="VARCHAR(16)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="uq_codigo_categoria_persona" />
+            </column>
+            <column name="nombre_categoria_persona" type="VARCHAR(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726869721-152">
+        <createTable tableName="distintivo_persona">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_distintivo_persona"/>
+            </column>
+            <column name="codigo_distintivo_persona" type="VARCHAR(16)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="uq_codigo_distintivo_persona" />
+            </column>
+            <column name="nombre_distintivo_persona" type="VARCHAR(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726869721-156">
+        <createTable tableName="estado_civil">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_estado_civil"/>
+            </column>
+            <column name="codigo_estado_civil" type="VARCHAR(16)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="uq_codigo_estado_civil" />
+            </column>
+            <column name="nombre_estado_civil" type="VARCHAR(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="30042020-2">
+        <createTable tableName="poblacion">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_poblacion"/>
+            </column>
+            <column name="codigo_poblacion" type="VARCHAR(16)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="uq_codigo_poblacion" />
+            </column>
+            <column name="nombre_poblacion" type="VARCHAR(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="30042020-1">
+        <createTable tableName="provincia">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_provincia"/>
+            </column>
+            <column name="codigo_provincia" type="VARCHAR(16)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="uq_codigo_provincia" />
+            </column>
+            <column name="nombre_provincia" type="VARCHAR(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726869721-181">
+        <createTable tableName="opcion_sino">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_opcion_sino"/>
+            </column>
+            <column name="codigo_opcion_sino" type="VARCHAR(16)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="uq_codigo_opcion_sino" />
+            </column>
+            <column name="nombre_opcion_sino" type="VARCHAR(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726869721-229">
+        <createTable tableName="tipo_sangre">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_tipo_sangre"/>
+            </column>
+            <column name="codigo_tipo_sangre" type="VARCHAR(16)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="uq_codigo_tipo_sangre" />
+            </column>
+            <column name="nombre_tipo_sangre" type="VARCHAR(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726869721-210">
+        <createTable tableName="sexo">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_sexo"/>
+            </column>
+            <column name="codigo_sexo" type="VARCHAR(16)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="uq_codigo_sexo" />
+            </column>
+            <column name="nombre_sexo" type="VARCHAR(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726869721-222">
+        <createTable tableName="tipo_organizacion">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_tipo_organizacion"/>
+            </column>
+            <column name="codigo_tipo_organizacion" type="VARCHAR(16)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="uq_codigo_tipo_organizacion" />/>
+            </column>
+            <column name="nombre_tipo_organizacion" type="VARCHAR(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    
+    <!-- OAuth tables -->
+    
+    <changeSet author="Harold Da Costa" id="01112019-001">
+        <createTable tableName="oauth_access_token">
+            <column name="token_id" type="VARCHAR(255)"/>
+            <column name="token" type="BYTEA"/>
+            <column name="authentication_id" type="VARCHAR(255)">
+                <constraints primaryKey="true" primaryKeyName="oauth_access_token_pkey"/>
+            </column>
+            <column name="user_name" type="VARCHAR(255)"/>
+            <column name="client_id" type="VARCHAR(255)"/>
+            <column name="authentication" type="BYTEA"/>
+            <column name="refresh_token" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Harold Da Costa" id="01112019-002">
+        <createTable tableName="oauth_approvals">
+            <column name="userid" type="VARCHAR(255)"/>
+            <column name="clientid" type="VARCHAR(255)"/>
+            <column name="scope" type="VARCHAR(255)"/>
+            <column name="status" type="VARCHAR(10)"/>
+            <column name="expiresat" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="lastmodifiedat" type="TIMESTAMP WITHOUT TIME ZONE"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Harold Da Costa" id="01112019-003">
+        <createTable tableName="oauth_client_details">
+        	<column autoIncrement="true" name="id" type="BIGSERIAL">
+				<constraints primaryKey="true" primaryKeyName="pk_oauth_client_details" />
+			</column>
+            <column name="client_id" type="VARCHAR(255)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="uq_client_id"/>
+            </column>
+            <column name="resource_ids" type="VARCHAR(255)"/>
+            <column name="client_secret" type="VARCHAR(255)"/>
+            <column name="scope" type="VARCHAR(255)"/>
+            <column name="authorized_grant_types" type="VARCHAR(255)"/>
+            <column name="web_server_redirect_uri" type="VARCHAR(255)"/>
+            <column name="authorities" type="VARCHAR(255)"/>
+            <column name="access_token_validity" type="INTEGER"/>
+            <column name="refresh_token_validity" type="INTEGER"/>
+            <column name="additional_information" type="VARCHAR(4096)"/>
+            <column name="autoapprove" type="VARCHAR(255)"/>
+            <column name="map_to_backend_id" type="varchar(255)"/>
+            <column name="backend_access_token" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Harold Da Costa" id="01112019-004">
+        <createTable tableName="oauth_client_token">
+            <column name="token_id" type="VARCHAR(255)"/>
+            <column name="token" type="BYTEA"/>
+            <column name="authentication_id" type="VARCHAR(255)">
+                <constraints primaryKey="true" primaryKeyName="oauth_client_token_pkey"/>
+            </column>
+            <column name="user_name" type="VARCHAR(255)"/>
+            <column name="client_id" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Harold Da Costa" id="01112019-005">
+        <createTable tableName="oauth_code">
+            <column name="code" type="VARCHAR(255)"/>
+            <column name="authentication" type="BYTEA"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Harold Da Costa" id="01112019-006">
+        <createTable tableName="oauth_refresh_token">
+            <column name="token_id" type="VARCHAR(255)"/>
+            <column name="token" type="BYTEA"/>
+            <column name="authentication" type="BYTEA"/>
+        </createTable>
+    </changeSet>
+    
+    <!-- End of OAuth tables -->
+    
+    <changeSet author="harold (generated)" id="1551726869721-233">
+        <createTable tableName="ubicacion_geografica">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_ubicacion_geografica"/>
+            </column>
+            <column name="codigo_ubicacion_geografica" type="VARCHAR(16)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="uq_codigo_ubicacion_geografica"/>
+            </column>
+            <column name="nombre_ubicacion_geografica" type="VARCHAR(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nombre_abreviado_ubicacion_geografica" type="VARCHAR(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="zona_horaria_ubicacion_geografica" type="VARCHAR(64)"/>
+            <column name="codigo_telefono_ubicacion_geografica" type="VARCHAR(8)"/>
+            <column name="formato_telefono_ubicacion_geografica" type="VARCHAR(64)"/>
+            <column name="language" type="VARCHAR(5)"/>
+            <column name="id_ubicacion_geografica_superior" type="BIGINT"/>
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        
+		<addForeignKeyConstraint baseColumnNames="id_ubicacion_geografica_superior" baseTableName="ubicacion_geografica" 
+			constraintName="fk_id_ubicacion_geografica_superior_from_ubicacion_geografica" deferrable="false" initiallyDeferred="false" 
+			onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="ubicacion_geografica" 
+			validate="true"/>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726869721-129">
+        <createTable tableName="banco">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_banco"/>
+            </column>
+            <column name="codigo_banco" type="VARCHAR(16)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="uq_codigo_banco" />
+            </column>
+            <column name="nombre_banco" type="VARCHAR(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rif_banco" type="VARCHAR(64)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="id_ubicacion_geografica" type="BIGINT" />
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        
+        <addForeignKeyConstraint baseColumnNames="id_ubicacion_geografica" baseTableName="banco" 
+        	constraintName="fk_id_ubicacion_geografica_estado_from_banco" deferrable="false" initiallyDeferred="false" 
+        	onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="ubicacion_geografica" 
+        	validate="true"/>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="30042020-3">
+        <createTable tableName="codigo_postal">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_codigo_postal"/>
+            </column>
+			<column name="codigo_postal" type="VARCHAR(16)">
+				<constraints nullable="false" />
+            </column>
+            <column name="id_ubicacion_geografica" type="BIGINT"/>
+			<column name="id_provincia" type="BIGINT"/>
+			<column name="id_poblacion" type="BIGINT"/>
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="id_ubicacion_geografica" baseTableName="codigo_postal" 
+        	constraintName="fk_id_ubicacion_geografica_from_codigo_postal" deferrable="false" initiallyDeferred="false" 
+        	onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="ubicacion_geografica" 
+        	validate="true"/>
+        <addForeignKeyConstraint baseColumnNames="id_provincia" baseTableName="codigo_postal" 
+        	constraintName="fk_id_provincia_from_codigo_postal" deferrable="false" initiallyDeferred="false" 
+        	onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="provincia" 
+        	validate="true"/>
+        <addForeignKeyConstraint baseColumnNames="id_poblacion" baseTableName="codigo_postal" 
+        	constraintName="fk_id_poblacion_from_codigo_postal" deferrable="false" initiallyDeferred="false" 
+        	onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="poblacion" 
+        	validate="true"/>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726869721-182">
+        <createTable tableName="organizacion">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_organizacion"/>
+            </column>
+            <column name="rif_organizacion" type="VARCHAR(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nit_organizacion" type="VARCHAR(64)"/>
+            <column name="razon_organizacion" type="VARCHAR">
+                <constraints nullable="false"/>
+            </column>
+            <column name="telefono_fijo_organizacion" type="VARCHAR(32)"/>
+            <column name="telefono_secundario_organizacion" type="VARCHAR(32)"/>
+            <column name="e_mail_organizacion" type="VARCHAR(64)"/>
+            <column name="direccion_organizacion" type="VARCHAR"/>
+            <column name="cabecera" type="VARCHAR"/>
+            <column name="url1" type="VARCHAR(255)"/>
+            <column name="url1_file_name" type="VARCHAR(255)"/>
+            <column name="url1_file_size" type="FLOAT8"/>
+            <column name="formato_cabecera" type="VARCHAR"/>
+            <column name="formato_pie_pagina" type="VARCHAR"/>
+            <column name="formato_firma" type="VARCHAR"/>
+            <column name="next_nro_pedido" type="BIGINT"/>
+            <column name="numero_imp_fiscal" type="VARCHAR(128)"/>
+            <column defaultValueNumeric="1" name="es_persona_contacto_required" type="BIGINT"/>
+            <column defaultValueNumeric="1" name="es_habilitado" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_codigo_postal" type="BIGINT"/>
+            <column name="id_organizacion_padre" type="BIGINT"/>
+            <column name="id_tipo_organizacion" type="BIGINT"/>
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+ 
+		<addForeignKeyConstraint baseColumnNames="es_persona_contacto_required" baseTableName="organizacion" 
+			constraintName="fk_es_persona_contacto_required_from_organizacion" deferrable="false" initiallyDeferred="false" 
+			onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="opcion_sino" validate="true"/>
+		<addForeignKeyConstraint baseColumnNames="es_habilitado" baseTableName="organizacion" 
+			constraintName="fk_es_habilitado_from_organizacion" deferrable="false" initiallyDeferred="false" 
+			onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="opcion_sino" validate="true"/>
+		<addForeignKeyConstraint baseColumnNames="id_codigo_postal" baseTableName="organizacion" 
+        	constraintName="fk_id_codigo_postal_from_organizacion" deferrable="false" initiallyDeferred="false" 
+        	onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="codigo_postal" 
+        	validate="true"/>
+		<addForeignKeyConstraint baseColumnNames="id_organizacion_padre" baseTableName="organizacion" 
+			constraintName="fk_id_organizacion_padre_from_organizacion" deferrable="false" initiallyDeferred="false" 
+			onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="organizacion" validate="true"/>
+		<addForeignKeyConstraint baseColumnNames="id_tipo_organizacion" baseTableName="organizacion" 
+			constraintName="fk_id_tipo_organizacion_from_organizacion" deferrable="false" initiallyDeferred="false" 
+			onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="tipo_organizacion" 
+			validate="true"/>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="29102020-1">
+        <createTable tableName="tipo_documento_identificacion">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_tipo_documento_identificacion"/>
+            </column>
+            <column name="codigo_tipo_documento_identificacion" type="VARCHAR(16)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="uq_codigo_tipo_documento_identificacion" />
+            </column>
+             <column name="nombre_tipo_documento_identificacion" type="VARCHAR(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_ubicacion_geografica" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        
+        <addForeignKeyConstraint baseColumnNames="id_ubicacion_geografica" baseTableName="tipo_documento_identificacion" 
+        	constraintName="fk_id_ubicacion_geografica_from_tipo_documento_identificacion" deferrable="false" initiallyDeferred="false" 
+        	onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="ubicacion_geografica" 
+        	validate="true"/>
+	</changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726869721-196">
+        <createTable tableName="propiedades_sistema">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_propiedades_sistema"/>
+            </column>
+            <column name="propiedad" type="VARCHAR">
+                <constraints nullable="false"/>
+            </column>
+            <column name="valor" type="VARCHAR">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_organizacion" type="BIGINT"/>
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+		<addForeignKeyConstraint baseColumnNames="id_organizacion" baseTableName="propiedades_sistema" 
+			constraintName="fk_id_organizacion_from_propiedades_sistema" deferrable="false" initiallyDeferred="false" 
+			onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="organizacion" validate="true"/>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726869721-187">
+        <createTable tableName="persona">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_persona"/>
+            </column>
+            <column name="codigo_persona" type="VARCHAR(16)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cedula_persona" type="VARCHAR(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nombre_persona" type="VARCHAR(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="apellido_persona" type="VARCHAR(64)"/>
+            <column name="rif_persona" type="VARCHAR(64)"/>
+            <column name="numero_msas" type="VARCHAR"/>
+            <column name="fecha_nacimiento_persona" type="DATE"/>
+            <column name="fecha_defuncion_persona" type="DATE"/>
+            <column name="fecha_vencimiento_rif" type="DATE"/>
+            <column name="telefono_movil_persona" type="VARCHAR(32)"/>
+            <column name="telefono_fijo_persona" type="VARCHAR(32)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="e_mail_persona" type="VARCHAR(64)"/>
+            <column name="direccion_persona" type="VARCHAR">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nombre_contacto_uno" type="VARCHAR(64)"/>
+            <column name="telefono_contacto_uno" type="VARCHAR(32)"/>
+            <column name="telefono_movil_contacto_uno" type="VARCHAR(32)"/>
+            <column name="email_contacto_uno" type="VARCHAR(64)"/>
+            <column name="parentesco_contacto_uno" type="VARCHAR"/>
+            <column name="nombre_contacto_dos" type="VARCHAR(64)"/>
+            <column name="telefono_contacto_dos" type="VARCHAR(32)"/>
+            <column name="telefono_movil_contacto_dos" type="VARCHAR(32)"/>
+            <column name="email_contacto_dos" type="VARCHAR(64)"/>
+            <column name="parentesco_contacto_dos" type="VARCHAR"/>
+            <column name="edad" type="FLOAT4"/>
+            <column name="url1" type="VARCHAR(255)"/>
+            <column name="url1_file_name" type="VARCHAR(255)"/>
+            <column name="url1_file_size" type="FLOAT8"/>
+            <column name="comentarios_adicionales" type="VARCHAR"/>
+            <column name="nombre_doctor_referencia" type="VARCHAR"/>
+            <column name="telefono_contacto_doctor_referencia" type="VARCHAR(32)"/>
+            <column name="telefono_movil_doctor_referencia" type="VARCHAR(32)"/>
+            <column name="email_doctor_referencia" type="VARCHAR(64)"/>
+            <column name="lugar_nacimiento_otro" type="VARCHAR(128)"/>
+            <column name="direccion_persona_calle_avenida" type="VARCHAR"/>
+            <column name="direccion_persona_edificio" type="VARCHAR"/>
+            <column name="direccion_persona_consultorio" type="VARCHAR"/>
+            <column defaultValueNumeric="1" name="es_activa" type="BIGINT"/>
+            <column defaultValueNumeric="2" name="es_publica" type="BIGINT"/>
+            <column name="id_estado_civil" type="BIGINT"/>
+            <column name="id_sexo" type="BIGINT"/>
+            <column name="id_tipo_sangre" type="BIGINT"/>
+            <column name="id_ubicacion_geografica_nacimiento" type="BIGINT"/>
+            <column name="id_distintivo_persona" type="BIGINT"/>
+            <column name="id_pais" type="BIGINT"/>
+            <column name="id_codigo_postal" type="BIGINT" />	
+            <column name="id_tipo_documento_identificacion" type="BIGINT" />
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        
+        <addUniqueConstraint columnNames="id_tipo_documento_identificacion,cedula_persona,id_pais"
+        	tableName="persona" constraintName="uq_person_global_identification"/>
+        
+		<addForeignKeyConstraint baseColumnNames="es_activa" baseTableName="persona" constraintName="fk_es_activa_from_persona" 
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" 
+			referencedTableName="opcion_sino" validate="true"/>
+		<addForeignKeyConstraint baseColumnNames="es_publica" baseTableName="persona" constraintName="fk_es_publica_from_persona" 
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" 
+			referencedTableName="opcion_sino" validate="true"/>
+		<addForeignKeyConstraint baseColumnNames="id_estado_civil" baseTableName="persona" 
+			constraintName="fk_id_estado_civil_from_persona" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" 
+			onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="estado_civil" validate="true"/>
+        <addForeignKeyConstraint baseColumnNames="id_sexo" baseTableName="persona" constraintName="fk_id_sexo_from_persona" 
+        	deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" 
+        	referencedTableName="sexo" validate="true"/>
+        <addForeignKeyConstraint baseColumnNames="id_tipo_sangre" baseTableName="persona" 
+        	constraintName="fk_id_tipo_sangre_from_persona" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" 
+        	onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="tipo_sangre" validate="true"/>
+        <addForeignKeyConstraint baseColumnNames="id_ubicacion_geografica_nacimiento" baseTableName="persona" 
+        	constraintName="fk_id_ubicacion_geografica_nacimiento_from_persona" deferrable="false" initiallyDeferred="false" 
+        	onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="ubicacion_geografica" 
+        	validate="true"/>
+        <addForeignKeyConstraint baseColumnNames="id_distintivo_persona" baseTableName="persona" 
+        	constraintName="fk_id_distintivo_persona_from_persona" deferrable="false" initiallyDeferred="false" 
+        	onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="distintivo_persona" 
+        	validate="true"/>
+        <addForeignKeyConstraint baseColumnNames="id_pais" baseTableName="persona" 
+        	constraintName="fk_id_ubicacion_geografica_pais_from_persona" deferrable="false" initiallyDeferred="false" 
+        	onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="ubicacion_geografica" 
+        	validate="true"/>
+        <addForeignKeyConstraint baseColumnNames="id_codigo_postal" baseTableName="persona" 
+        	constraintName="fk_id_codigo_postal_from_persona" deferrable="false" initiallyDeferred="false" 
+        	onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="codigo_postal" 
+        	validate="true"/>
+        <addForeignKeyConstraint baseColumnNames="id_tipo_documento_identificacion" baseTableName="persona" 
+        	constraintName="fk_id_tipo_documento_identificacion_from_persona" deferrable="false" initiallyDeferred="false" 
+        	onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="tipo_documento_identificacion" 
+        	validate="true"/>
+        	
+        <createIndex indexName="email_index" tableName="persona">
+            <column name="e_mail_persona"/>
+        </createIndex>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="10052020-3">
+        <createTable tableName="persona_organizacion">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_persona_organizacion"/>
+            </column>
+            <column name="id_persona" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+             <column name="id_organizacion" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_categoria_persona" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <addForeignKeyConstraint baseColumnNames="id_persona" baseTableName="persona_organizacion" 
+        	constraintName="fk_id_persona_from_persona_organizacion" deferrable="false" initiallyDeferred="false" 
+        	onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="persona" 
+        	validate="true"/>
+        <addForeignKeyConstraint baseColumnNames="id_organizacion" baseTableName="persona_organizacion" 
+        	constraintName="fk_id_organizacion_from_persona_organizacion" deferrable="false" initiallyDeferred="false" 
+        	onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="organizacion" 
+        	validate="true"/>
+        <addForeignKeyConstraint baseColumnNames="id_categoria_persona" baseTableName="persona_organizacion" 
+        	constraintName="fk_id_categoria_persona_from_persona_organizacion" deferrable="false" initiallyDeferred="false" 
+        	onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="categoria_persona" 
+        	validate="true"/>
+        	
+        <addUniqueConstraint columnNames="id_persona,id_organizacion,id_categoria_persona"
+        	tableName="persona_organizacion" constraintName="uq_persona_organizacion"/>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726869721-207">
+        <createTable tableName="rol">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_rol"/>
+            </column>
+            <column name="codigo_rol" type="VARCHAR(16)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="uq_codigo_rol" />
+            </column>
+            <column name="nombre_rol" type="VARCHAR(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726869721-237">
+        <createTable tableName="usuario">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_usuario"/>
+            </column>
+            <column name="codigo_usuario" type="VARCHAR(64)">
+                <constraints nullable="false" unique="true" uniqueConstraintName="uq_codigo_usuario" />
+            </column>
+            <column name="password_usuario" type="VARCHAR(128)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password_hint_usuario" type="VARCHAR(64)"/>
+            <column name="texto_arriba_derecha" type="VARCHAR"/>
+            <column name="texto_pie_de_pagina" type="VARCHAR"/>
+            <column name="formato_firma" type="VARCHAR"/>
+            <column defaultValueNumeric="1" name="es_activa" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValueNumeric="2" name="es_cuenta_expirada" type="BIGINT"/>
+            <column defaultValueNumeric="2" name="es_cuenta_bloqueada" type="BIGINT"/>
+            <column defaultValueNumeric="2" name="es_credenciales_expiradas" type="BIGINT"/>
+            <column defaultValueNumeric="2" name="es_configurado_perfil" type="BIGINT"/>
+            <column name="fecha_ultimo_login" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        
+		<addForeignKeyConstraint baseColumnNames="es_activa" baseTableName="usuario" 
+			constraintName="fk_es_activa_from_usuario" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" 
+			onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="opcion_sino" validate="true"/>
+		<addForeignKeyConstraint baseColumnNames="es_configurado_perfil" baseTableName="usuario" 
+			constraintName="fk_es_configurado_perfil_from_usuario" deferrable="false" initiallyDeferred="false" 
+			onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="opcion_sino" 
+			validate="true"/>
+		<addForeignKeyConstraint baseColumnNames="es_credenciales_expiradas" baseTableName="usuario" 
+			constraintName="fk_es_credenciales_expiradas_from_usuario" deferrable="false" initiallyDeferred="false" 
+			onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="opcion_sino" 
+			validate="true"/>
+		<addForeignKeyConstraint baseColumnNames="es_cuenta_bloqueada" baseTableName="usuario" 
+			constraintName="fk_es_cuenta_bloqueada_from_usuario" deferrable="false" initiallyDeferred="false" 
+			onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="opcion_sino" 
+			validate="true"/>
+		<addForeignKeyConstraint baseColumnNames="es_cuenta_expirada" baseTableName="usuario" 
+			constraintName="fk_es_cuenta_expirada_from_usuario" deferrable="false" initiallyDeferred="false" 
+			onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="opcion_sino" 
+			validate="true"/>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726869721-209">
+        <createTable tableName="rol_usuario">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_rol_usuario"/>
+            </column>
+            <column name="id_usuario" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_rol" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        
+		<addUniqueConstraint columnNames="id_usuario, id_rol" constraintName="uq_rol_usuario" tableName="rol_usuario"/>
+		<addForeignKeyConstraint baseColumnNames="id_usuario" baseTableName="rol_usuario" 
+			constraintName="fk_id_usuario_from_rol_usuario" deferrable="false" initiallyDeferred="false" 
+			onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="usuario" validate="true"/>
+		<addForeignKeyConstraint baseColumnNames="id_rol" baseTableName="rol_usuario" 
+			constraintName="fk_id_rol_from_rol_usuario" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" 
+			onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="rol" validate="true"/>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726869721-242">
+        <createTable tableName="usuario_organizacion">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_usuario_organizacion"/>
+            </column>
+            <column name="id_usuario" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_organizacion" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_sede" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id_persona" type="BIGINT"/>
+            <column name="id_sede_default" type="BIGINT"/>
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        
+        <addForeignKeyConstraint baseColumnNames="id_usuario" baseTableName="usuario_organizacion" 
+        	constraintName="fk_id_usuario_from_usuario_organizacion" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" 
+        	onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="usuario" validate="true"/>
+        <addForeignKeyConstraint baseColumnNames="id_organizacion" baseTableName="usuario_organizacion" 
+        	constraintName="fk_id_organizacion_from_usuario_organizacion" deferrable="false" initiallyDeferred="false" 
+        	onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="organizacion" 
+        	validate="true"/>
+        <addForeignKeyConstraint baseColumnNames="id_sede" baseTableName="usuario_organizacion" 
+        	constraintName="fk_id_sede_from_usuario_organizacion" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" 
+        	onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="organizacion" validate="true"/>
+        <addForeignKeyConstraint baseColumnNames="id_persona" baseTableName="usuario_organizacion" 
+        	constraintName="fk_id_persona_from_usuario_organizacion" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" 
+        	onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="persona" validate="true"/>
+        <addForeignKeyConstraint baseColumnNames="id_sede_default" baseTableName="usuario_organizacion" 
+        	constraintName="fk_id_sede_default_from_usuario_organizacion" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" 
+        	onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="organizacion" validate="true"/>
+    </changeSet>
+    
+    <changeSet author="harold (generated)" id="1551726869721-236">
+        <createTable tableName="user_access">
+            <column autoIncrement="true" name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" primaryKeyName="pk_user_access"/>
+            </column>
+            <column name="codigo_usuario" type="VARCHAR(64)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="razon_organizacion" type="VARCHAR(64)"/>
+            <column name="acceso" remarks="p permitido, n negado" type="VARCHAR(1)"/>
+            <column name="fecha" type="TIMESTAMP WITHOUT TIME ZONE">
+                <constraints nullable="false"/>
+            </column>
+            <column defaultValue="&quot;current_user&quot;()" name="usuario_creacion" type="VARCHAR(64)"/>
+            <column defaultValueComputed="now()" name="fecha_creacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="usuario_modificacion" type="VARCHAR(64)"/>
+            <column name="fecha_modificacion" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column defaultValueNumeric="0" name="version" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

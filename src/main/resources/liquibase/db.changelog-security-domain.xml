@@ -1,0 +1,21 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.liquibase.org/xml/ns/dbchangelog 
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
+		
+	<changeSet author="harold (generated)" id="25042021-1">
+        <insert tableName="rol">
+            <column name="id" valueNumeric="100"/>
+            <column name="codigo_rol" value="group_admin"/>
+            <column name="nombre_rol" value="Administrator of the organization"/>
+            <column name="usuario_creacion" value="postgres"/>
+            <column name="fecha_creacion" valueDate="2015-01-19T15:54:58.82"/>
+            <column name="usuario_modificacion"/>
+            <column name="fecha_modificacion"/>
+            <column name="version" valueNumeric="0"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

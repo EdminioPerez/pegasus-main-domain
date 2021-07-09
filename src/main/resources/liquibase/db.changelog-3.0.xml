@@ -1,0 +1,18 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.liquibase.org/xml/ns/dbchangelog 
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd">
+
+	<changeSet author="hdacosta" id="10062021-1">
+		<addColumn tableName="organizacion">
+			<column name="max_organizaciones_por_grupo" type="INT" />
+			<column name="max_sedes_por_organizacion" type="INT" />
+			<column afterColumn="direccion_organizacion" name="titulo_responsable" type="VARCHAR(64)" />
+			<column afterColumn="direccion_organizacion" name="nombre_responsable" type="VARCHAR(64)" />
+		</addColumn>
+	</changeSet>
+
+</databaseChangeLog>
