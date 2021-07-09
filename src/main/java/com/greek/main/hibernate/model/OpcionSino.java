@@ -1,5 +1,5 @@
 package com.greek.main.hibernate.model;
-// Generated 5 jul. 2021 17:48:18 by Hibernate Tools 3.2.2.GA and Assent Architecture
+// Generated 10 jul. 2021 0:09:56 by Hibernate Tools 3.2.2.GA and Assent Architecture
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -355,9 +355,11 @@ public class OpcionSino  implements Versionable,Seleccionable,Identificable,Fill
     }
     
     public void cleanPOJO() {
+    	// Clean entities objects with id
     }
     
     public void fillPOJO() {
+    	// Initialize all properties with new
     }
     
     public OpcionSino createPOJO() {

@@ -22,7 +22,9 @@
 		<properties-maven-plugin.version>1.0.0</properties-maven-plugin.version>
 		<liquibase-maven-plugin.version>4.2.2</liquibase-maven-plugin.version>
 
-		<sonar.projectName>domain-main</sonar.projectName>
+		<sonar.projectKey>EdminioPerez_pegasus-main-domain</sonar.projectKey>
+		<sonar.organization>hdacostac-github</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<sonar.exclusions>**/com/greek/main/hibernate/**/*</sonar.exclusions>
 	</properties>
 
@@ -77,7 +79,7 @@
 						<version>${liquibase-maven-plugin.version}</version>
 						<configuration>
 							<propertyFile>src/main/resources/liquibase.properties</propertyFile>
-							<!-- <clearCheckSums>true</clearCheckSums> -->
+							<clearCheckSums>true</clearCheckSums>
 						</configuration>
 						<executions>
 							<execution>
@@ -102,7 +104,6 @@
 						<version>${liquibase-maven-plugin.version}</version>
 						<configuration>
 							<propertyFile>src/main/resources/liquibase.properties</propertyFile>
-							<!-- <clearCheckSums>true</clearCheckSums> -->
 						</configuration>
 						<executions>
 							<execution>

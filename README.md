@@ -66,5 +66,13 @@ This step only should be executed when there are changes in the DB model, and we
 
 Inside the folder of **pegasus-main-domain**
 
-	$ mvn clean compile 
+	$ mvn clean compile
 	$ mvn generate-sources -P generateJPAEntities
+	
+## Clear checksums
+
+	mvn process-resources -Pliquibase-clear-checksums
+
+## Sonar
+
+$> mvn clean verify -Psonar
