@@ -11,21 +11,20 @@ import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.github.javafaker.Faker;
 
-public class FakerDataPopulator implements Runnable {
+import lombok.extern.slf4j.Slf4j;
 
-	private static final Logger logger = LoggerFactory.getLogger(FakerDataPopulator.class);
+@Slf4j
+public class FakerDataPopulator implements Runnable {
 
 	private static Properties prop = new Properties();
 	private static BasicDataSource dataSource;
 
 	public static void main(String[] args) throws IOException {
-		logger.info("Populating with fake data");
-		
+		log.info("Populating with fake data");
+
 		loadProperties();
 		dataSource = loadDataSource();
 
@@ -61,7 +60,7 @@ public class FakerDataPopulator implements Runnable {
 						faker.phoneNumber().cellPhone(),
 						StringUtils.stripAccents(StringUtils.deleteWhitespace(faker.internet().emailAddress())));
 			} catch (SQLException sqle) {
-				logger.error("error", sqle);
+				log.error("error", sqle);
 			}
 
 			prevPercentDone = printPercentDone(prevPercentDone, x, total);
@@ -72,7 +71,7 @@ public class FakerDataPopulator implements Runnable {
 		int percentDone = (x * 100) / total;
 
 		if (percentDone % 5 == 0 && percentDone != prevPercentDone) {
-			logger.info("Done...{}%", percentDone);
+			log.info("Done...{}%", percentDone);
 		}
 
 		return percentDone;
@@ -91,7 +90,7 @@ public class FakerDataPopulator implements Runnable {
 	private static void loadProperties() throws IOException {
 		try (InputStream input = FakerDataPopulator.class.getClassLoader().getResourceAsStream("domain.properties")) {
 			if (input == null) {
-				logger.debug("Sorry, unable to find config.properties");
+				log.debug("Sorry, unable to find config.properties");
 				return;
 			}
 
@@ -99,10 +98,10 @@ public class FakerDataPopulator implements Runnable {
 			prop.load(input);
 
 			// get the property value and print it out
-			logger.debug(prop.getProperty("hibernate.connection.driver_class"));
-			logger.debug(prop.getProperty("hibernate.connection.url"));
-			logger.debug(prop.getProperty("hibernate.connection.username"));
-			logger.debug(prop.getProperty("hibernate.connection.password"));
+			log.debug(prop.getProperty("hibernate.connection.driver_class"));
+			log.debug(prop.getProperty("hibernate.connection.url"));
+			log.debug(prop.getProperty("hibernate.connection.username"));
+			log.debug(prop.getProperty("hibernate.connection.password"));
 		}
 	}
 

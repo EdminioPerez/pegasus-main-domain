@@ -16,18 +16,17 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class PostalCodesDataPopulator implements Runnable {
-
-	private static final Logger logger = LoggerFactory.getLogger(PostalCodesDataPopulator.class);
 
 	private static Properties prop = new Properties();
 	private static BasicDataSource dataSource;
 
 	public static void main(String[] args) throws IOException {
-		logger.info("Populating postal code for Spain");
+		log.info("Populating postal code for Spain");
 
 		loadProperties();
 		dataSource = loadDataSource();
@@ -59,64 +58,65 @@ public class PostalCodesDataPopulator implements Runnable {
 			Sheet sheet = workbook.getSheetAt(0);
 			TreeMap<String, Tipo1> provincias = new TreeMap<>();
 			TreeMap<String, Tipo1> poblaciones = new TreeMap<>();
-	
+
 			int fila = 0;
 			long provinciaId = 0;
 			long poblacionId = 0;
 			long codigoPostalId = 0;
-	
+
 			Tipo1 provincia = null;
 			Tipo1 poblacion = null;
 			for (Row row : sheet) {
 				fila++;
-	
+
 				if (fila == 1) { // Skip the header
 					continue;
 				}
-	
-	//			if (fila == 50) {
-	//				break;
-	//			}
-	
+
+				// if (fila == 50) {
+				// break;
+				// }
+
 				for (Cell cell : row) {
-					logger.debug("cell:{} type:{}", cell.getColumnIndex(), cell.getCellType());
-	
+					log.debug("cell:{} type:{}", cell.getColumnIndex(), cell.getCellType());
+
 					switch (cell.getCellType()) {
 					case STRING:
-						logger.trace("Value:{}", cell.getStringCellValue());
-	
+						log.trace("Value:{}", cell.getStringCellValue());
+
 						if (cell.getColumnIndex() == 1) {
 							provincia = new Tipo1();
 							provincia.setNombre(cell.getStringCellValue());
-	
+
 							Tipo1 added = provincias.putIfAbsent(provincia.getNombre(), provincia);
-	
+
 							if (added == null) {
 								provincia.setId(++provinciaId);
 								saveProvincia(provincia, "es");
 							}
-	
-							logger.trace("Provincia created:{}", provincias.get(provincia.getNombre()));
+
+							log.trace("Provincia created:{}", provincias.get(provincia.getNombre()));
 						}
-	
+
 						if (cell.getColumnIndex() == 2) {
 							poblacion = new Tipo1();
 							poblacion.setNombre(cell.getStringCellValue());
-	
+
 							Tipo1 added = poblaciones.putIfAbsent(poblacion.getNombre(), poblacion);
-	
+
 							if (added == null) {
 								poblacion.setId(++poblacionId);
 								savePoblacion(poblacion, "es");
 							}
-	
-							logger.trace("Poblacion created:{}", poblaciones.get(poblacion.getNombre()));
+
+							log.trace("Poblacion created:{}", poblaciones.get(poblacion.getNombre()));
 						}
-	
+
 						break;
 					case NUMERIC:
-						logger.trace("Value:{}, {}", cell.getNumericCellValue(),
-								StringUtils.leftPad(String.valueOf((int) cell.getNumericCellValue()), 5, // @formatter:off
+						log.trace("Value:{}, {}", cell.getNumericCellValue(),
+								StringUtils.leftPad(String.valueOf((int) cell.getNumericCellValue()),
+										5, // @formatter:off
 										"0"));
 	
 						saveCodigoPostal(StringUtils.leftPad(String.valueOf((int) cell.getNumericCellValue()), 5, "0"),
@@ -125,11 +125,11 @@ public class PostalCodesDataPopulator implements Runnable {
 	
 						break;
 					default:
-						logger.trace("Value:{}", cell.getRichStringCellValue());
+						log.trace("Value:{}", cell.getRichStringCellValue());
 					}
 				}
 	
-				logger.debug("****************************");
+				log.debug("****************************");
 			}
 		}
 	}
@@ -178,7 +178,7 @@ public class PostalCodesDataPopulator implements Runnable {
 		try (InputStream input = PostalCodesDataPopulator.class.getClassLoader()
 				.getResourceAsStream("domain.properties")) {
 			if (input == null) {
-				logger.debug("Sorry, unable to find config.properties");
+				log.debug("Sorry, unable to find config.properties");
 				return;
 			}
 
@@ -186,10 +186,10 @@ public class PostalCodesDataPopulator implements Runnable {
 			prop.load(input);
 
 			// get the property value and print it out
-			logger.debug(prop.getProperty("hibernate.connection.driver_class"));
-			logger.debug(prop.getProperty("hibernate.connection.url"));
-			logger.debug(prop.getProperty("hibernate.connection.username"));
-			logger.debug(prop.getProperty("hibernate.connection.password"));
+			log.debug(prop.getProperty("hibernate.connection.driver_class"));
+			log.debug(prop.getProperty("hibernate.connection.url"));
+			log.debug(prop.getProperty("hibernate.connection.username"));
+			log.debug(prop.getProperty("hibernate.connection.password"));
 		}
 	}
 

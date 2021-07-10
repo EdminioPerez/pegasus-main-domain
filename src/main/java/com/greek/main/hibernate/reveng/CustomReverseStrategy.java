@@ -9,12 +9,11 @@ import org.hibernate.cfg.reveng.DelegatingReverseEngineeringStrategy;
 import org.hibernate.cfg.reveng.ReverseEngineeringStrategy;
 import org.hibernate.cfg.reveng.TableIdentifier;
 import org.hibernate.mapping.MetaAttribute;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class CustomReverseStrategy extends DelegatingReverseEngineeringStrategy {
-
-	private static final Logger logger = LoggerFactory.getLogger(CustomReverseStrategy.class);
 
 	private static final String OWN_TYPES = "own types";
 
@@ -50,7 +49,7 @@ public class CustomReverseStrategy extends DelegatingReverseEngineeringStrategy 
 	public Properties getTableIdentifierProperties(TableIdentifier tableIdentifier) {
 		final String tableName = tableIdentifier.getName();
 
-		logger.info("Executing getTableIdentifier:" + tableName);
+		log.info("Executing getTableIdentifier:" + tableName);
 
 		Properties properties = super.getTableIdentifierProperties(tableIdentifier);
 
@@ -71,7 +70,7 @@ public class CustomReverseStrategy extends DelegatingReverseEngineeringStrategy 
 	public Map<String, MetaAttribute> columnToMetaAttributes(TableIdentifier tableIdentifier, String column) {
 		final String tableName = tableIdentifier.getName();
 
-		logger.info("Executing columnToMetaAttributes:" + tableName + " column:" + column);
+		log.info("Executing columnToMetaAttributes:" + tableName + " column:" + column);
 
 		Map<String, MetaAttribute> map = new HashMap<>();
 
@@ -94,7 +93,7 @@ public class CustomReverseStrategy extends DelegatingReverseEngineeringStrategy 
 	public Map<String, MetaAttribute> tableToMetaAttributes(TableIdentifier tableIdentifier) {
 		final String tableName = tableIdentifier.getName();
 
-		logger.debug("Executing tableToMetaAttributes:" + tableName);
+		log.debug("Executing tableToMetaAttributes:" + tableName);
 
 		Map<String, MetaAttribute> map = new HashMap<>();
 
