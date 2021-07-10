@@ -1,5 +1,5 @@
 package com.greek.main.hibernate.model;
-// Generated 5 jul. 2021 17:48:18 by Hibernate Tools 3.2.2.GA and Assent Architecture
+// Generated 10 jul. 2021 0:09:56 by Hibernate Tools 3.2.2.GA and Assent Architecture
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -886,6 +886,7 @@ public class Persona  implements Versionable,Seleccionable,Identificable,Fillabl
     }
     
     public void cleanPOJO() {
+    	// Clean entities objects with id
 		if(this.distintivoPersona != null &&
 			(distintivoPersona.getId() == null || this.distintivoPersona.getId().longValue() == 0)) {
 			distintivoPersona = null;
@@ -929,6 +930,7 @@ public class Persona  implements Versionable,Seleccionable,Identificable,Fillabl
     }
     
     public void fillPOJO() {
+    	// Initialize all properties with new
 		if(this.distintivoPersona == null) {
 			distintivoPersona = new DistintivoPersona();
 		}

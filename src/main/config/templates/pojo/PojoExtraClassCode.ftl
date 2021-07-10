@@ -22,6 +22,7 @@ ${pojo.getExtraClassCode()}
     }
     
     public void cleanPOJO() {
+    	// Clean entities objects with id
 <#foreach property in pojo.getAllPropertiesIterator()>
 	<#if c2h.isManyToOne(property)>
 		if(this.${property.name} != null &&
@@ -33,6 +34,7 @@ ${pojo.getExtraClassCode()}
     }
     
     public void fillPOJO() {
+    	// Initialize all properties with new
 <#foreach property in pojo.getAllPropertiesIterator()>
 	<#if c2h.isManyToOne(property)>
 		if(this.${property.name} == null) {
