@@ -24,6 +24,7 @@
 		<properties-maven-plugin.version>1.0.0</properties-maven-plugin.version>
 		<liquibase-maven-plugin.version>4.2.2</liquibase-maven-plugin.version>
 
+		<sonar.projectName>pegasus-main-domain</sonar.projectName>
 		<sonar.projectKey>EdminioPerez_pegasus-main-domain</sonar.projectKey>
 		<sonar.organization>hdacostac-github</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
