@@ -13,11 +13,11 @@ In **docker** folder, exists a file named
 
 you must give execution permissions to this file with:
 
-    $ chmod +x startPostgresDocker.sh
+	$ chmod +x startPostgresDocker.sh
 
 You could customize this file but keep in mind, to put the same values you put here, in all the references to user, pass, port and database in other files
 
-    $ ./startPostgresDocker.sh
+	$ ./startPostgresDocker.sh
 
 The role and database are created in this script, so you can jump directly to **Using Maven command for first DB populate**
 
@@ -25,7 +25,7 @@ The role and database are created in this script, so you can jump directly to **
 
 ### Linux command
 
-    $ createuser -P -s -e pegasus_dev_user -U postgres
+	$ createuser -P -s -e pegasus_dev_user -U postgres
 
 This command will prompt for password
 Pass:1234
@@ -41,13 +41,13 @@ Pass:1234
 
 ### Linux command
 
-    $ createdb pegasus_dev -O pegasus_dev_user -U postgres
+	$ createdb pegasus_dev -O pegasus_dev_user -U postgres
 
 ## Droping the database
 
 ### Linux command
 
-    $ dropdb pegasus_dev -U postgres
+	$ dropdb pegasus_dev -U postgres
 
 ## Using Maven command for first populate of DB
 
@@ -55,7 +55,7 @@ Check the values in file **liquibase.properties** has the right values of DB whe
 
 Inside the folder of **pegasus-main-domain**
 
-    $ mvn process-resources -P liquibase
+	$ mvn process-resources -P liquibase
 
 This step only should be executed when there are changes in the DB model, and we need to have new Java Model representation
 
@@ -68,7 +68,7 @@ Inside the folder of **pegasus-main-domain**
 
 	$ mvn clean compile
 	$ mvn generate-sources -P generateJPAEntities
-	
+
 ## Clear checksums
 
 	mvn process-resources -Pliquibase-clear-checksums
