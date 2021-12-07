@@ -1,8 +1,7 @@
 package com.greek.main.hibernate.model;
-// Generated 10 jul. 2021 0:09:56 by Hibernate Tools 3.2.2.GA and Assent Architecture
+// Generated 7 dic. 2021 10:22:07 by Hibernate Tools 3.2.2.GA and Assent Architecture
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.gvt.core.domain.types.Auditable;
 import com.gvt.core.domain.types.Cleanable;
 import com.gvt.core.domain.types.Fillable;
@@ -162,7 +161,7 @@ public class Sexo  implements Versionable,Seleccionable,Identificable,Fillable,C
     public void setFechaModificacion(LocalDateTime fechaModificacion) {
         this.fechaModificacion = fechaModificacion;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="sexo")
     public Set<Persona> getPersonas() {
         return this.personas;

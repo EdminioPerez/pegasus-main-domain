@@ -7,7 +7,7 @@
      */
 </#if>
 	<#if c2h.isCollection(property)>
-	@JsonIgnore
+	//@JsonIgnore
 	</#if>
     <#include "GetPropertyAnnotation.ftl"/>
     ${pojo.getPropertyGetModifiers(property)} ${pojo.getJavaTypeName(property, jdk5)} ${pojo.getGetterSignature(property)}() {

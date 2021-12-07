@@ -1,8 +1,7 @@
 package com.greek.main.hibernate.model;
-// Generated 10 jul. 2021 0:09:56 by Hibernate Tools 3.2.2.GA and Assent Architecture
+// Generated 7 dic. 2021 10:22:07 by Hibernate Tools 3.2.2.GA and Assent Architecture
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.gvt.core.domain.types.Auditable;
 import com.gvt.core.domain.types.Cleanable;
 import com.gvt.core.domain.types.Fillable;
@@ -699,7 +698,7 @@ public class Persona  implements Versionable,Seleccionable,Identificable,Fillabl
     public void setFechaModificacion(LocalDateTime fechaModificacion) {
         this.fechaModificacion = fechaModificacion;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="persona")
     public Set<PersonaOrganizacion> getPersonaOrganizacions() {
         return this.personaOrganizacions;
@@ -708,7 +707,7 @@ public class Persona  implements Versionable,Seleccionable,Identificable,Fillabl
     public void setPersonaOrganizacions(Set<PersonaOrganizacion> personaOrganizacions) {
         this.personaOrganizacions = personaOrganizacions;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="persona")
     public Set<UsuarioOrganizacion> getUsuarioOrganizacions() {
         return this.usuarioOrganizacions;

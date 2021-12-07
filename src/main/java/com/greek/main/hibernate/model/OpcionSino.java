@@ -1,8 +1,7 @@
 package com.greek.main.hibernate.model;
-// Generated 10 jul. 2021 0:09:56 by Hibernate Tools 3.2.2.GA and Assent Architecture
+// Generated 7 dic. 2021 10:22:07 by Hibernate Tools 3.2.2.GA and Assent Architecture
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.gvt.core.domain.types.Auditable;
 import com.gvt.core.domain.types.Cleanable;
 import com.gvt.core.domain.types.Fillable;
@@ -186,7 +185,7 @@ public class OpcionSino  implements Versionable,Seleccionable,Identificable,Fill
     public void setFechaModificacion(LocalDateTime fechaModificacion) {
         this.fechaModificacion = fechaModificacion;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="opcionSinoByEsHabilitado")
     public Set<Organizacion> getOrganizacionsForEsHabilitado() {
         return this.organizacionsForEsHabilitado;
@@ -195,7 +194,7 @@ public class OpcionSino  implements Versionable,Seleccionable,Identificable,Fill
     public void setOrganizacionsForEsHabilitado(Set<Organizacion> organizacionsForEsHabilitado) {
         this.organizacionsForEsHabilitado = organizacionsForEsHabilitado;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="opcionSinoByEsPublica")
     public Set<Persona> getPersonasForEsPublica() {
         return this.personasForEsPublica;
@@ -204,7 +203,7 @@ public class OpcionSino  implements Versionable,Seleccionable,Identificable,Fill
     public void setPersonasForEsPublica(Set<Persona> personasForEsPublica) {
         this.personasForEsPublica = personasForEsPublica;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="opcionSinoByEsCuentaExpirada")
     public Set<Usuario> getUsuariosForEsCuentaExpirada() {
         return this.usuariosForEsCuentaExpirada;
@@ -213,7 +212,7 @@ public class OpcionSino  implements Versionable,Seleccionable,Identificable,Fill
     public void setUsuariosForEsCuentaExpirada(Set<Usuario> usuariosForEsCuentaExpirada) {
         this.usuariosForEsCuentaExpirada = usuariosForEsCuentaExpirada;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="opcionSinoByEsActiva")
     public Set<Usuario> getUsuariosForEsActiva() {
         return this.usuariosForEsActiva;
@@ -222,7 +221,7 @@ public class OpcionSino  implements Versionable,Seleccionable,Identificable,Fill
     public void setUsuariosForEsActiva(Set<Usuario> usuariosForEsActiva) {
         this.usuariosForEsActiva = usuariosForEsActiva;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="opcionSinoByEsPersonaContactoRequired")
     public Set<Organizacion> getOrganizacionsForEsPersonaContactoRequired() {
         return this.organizacionsForEsPersonaContactoRequired;
@@ -231,7 +230,7 @@ public class OpcionSino  implements Versionable,Seleccionable,Identificable,Fill
     public void setOrganizacionsForEsPersonaContactoRequired(Set<Organizacion> organizacionsForEsPersonaContactoRequired) {
         this.organizacionsForEsPersonaContactoRequired = organizacionsForEsPersonaContactoRequired;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="opcionSinoByEsActiva")
     public Set<Persona> getPersonasForEsActiva() {
         return this.personasForEsActiva;
@@ -240,7 +239,7 @@ public class OpcionSino  implements Versionable,Seleccionable,Identificable,Fill
     public void setPersonasForEsActiva(Set<Persona> personasForEsActiva) {
         this.personasForEsActiva = personasForEsActiva;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="opcionSinoByEsCuentaBloqueada")
     public Set<Usuario> getUsuariosForEsCuentaBloqueada() {
         return this.usuariosForEsCuentaBloqueada;
@@ -249,7 +248,7 @@ public class OpcionSino  implements Versionable,Seleccionable,Identificable,Fill
     public void setUsuariosForEsCuentaBloqueada(Set<Usuario> usuariosForEsCuentaBloqueada) {
         this.usuariosForEsCuentaBloqueada = usuariosForEsCuentaBloqueada;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="opcionSinoByEsConfiguradoPerfil")
     public Set<Usuario> getUsuariosForEsConfiguradoPerfil() {
         return this.usuariosForEsConfiguradoPerfil;
@@ -258,7 +257,7 @@ public class OpcionSino  implements Versionable,Seleccionable,Identificable,Fill
     public void setUsuariosForEsConfiguradoPerfil(Set<Usuario> usuariosForEsConfiguradoPerfil) {
         this.usuariosForEsConfiguradoPerfil = usuariosForEsConfiguradoPerfil;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="opcionSinoByEsCredencialesExpiradas")
     public Set<Usuario> getUsuariosForEsCredencialesExpiradas() {
         return this.usuariosForEsCredencialesExpiradas;

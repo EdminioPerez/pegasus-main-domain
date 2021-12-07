@@ -1,8 +1,7 @@
 package com.greek.main.hibernate.model;
-// Generated 10 jul. 2021 0:09:56 by Hibernate Tools 3.2.2.GA and Assent Architecture
+// Generated 7 dic. 2021 10:22:07 by Hibernate Tools 3.2.2.GA and Assent Architecture
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.gvt.core.domain.types.Auditable;
 import com.gvt.core.domain.types.Cleanable;
 import com.gvt.core.domain.types.Fillable;
@@ -252,7 +251,7 @@ public class UbicacionGeografica  implements Versionable,Seleccionable,Identific
     public void setFechaModificacion(LocalDateTime fechaModificacion) {
         this.fechaModificacion = fechaModificacion;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="ubicacionGeografica")
     public Set<UbicacionGeografica> getUbicacionGeograficas() {
         return this.ubicacionGeograficas;
@@ -261,7 +260,7 @@ public class UbicacionGeografica  implements Versionable,Seleccionable,Identific
     public void setUbicacionGeograficas(Set<UbicacionGeografica> ubicacionGeograficas) {
         this.ubicacionGeograficas = ubicacionGeograficas;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="ubicacionGeografica")
     public Set<CodigoPostal> getCodigoPostals() {
         return this.codigoPostals;
@@ -270,7 +269,7 @@ public class UbicacionGeografica  implements Versionable,Seleccionable,Identific
     public void setCodigoPostals(Set<CodigoPostal> codigoPostals) {
         this.codigoPostals = codigoPostals;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="ubicacionGeografica")
     public Set<Banco> getBancos() {
         return this.bancos;
@@ -279,7 +278,7 @@ public class UbicacionGeografica  implements Versionable,Seleccionable,Identific
     public void setBancos(Set<Banco> bancos) {
         this.bancos = bancos;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="ubicacionGeograficaByIdPais")
     public Set<Persona> getPersonasForIdPais() {
         return this.personasForIdPais;
@@ -288,7 +287,7 @@ public class UbicacionGeografica  implements Versionable,Seleccionable,Identific
     public void setPersonasForIdPais(Set<Persona> personasForIdPais) {
         this.personasForIdPais = personasForIdPais;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="ubicacionGeograficaByIdUbicacionGeograficaNacimiento")
     public Set<Persona> getPersonasForIdUbicacionGeograficaNacimiento() {
         return this.personasForIdUbicacionGeograficaNacimiento;
@@ -297,7 +296,7 @@ public class UbicacionGeografica  implements Versionable,Seleccionable,Identific
     public void setPersonasForIdUbicacionGeograficaNacimiento(Set<Persona> personasForIdUbicacionGeograficaNacimiento) {
         this.personasForIdUbicacionGeograficaNacimiento = personasForIdUbicacionGeograficaNacimiento;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="ubicacionGeografica")
     public Set<TipoDocumentoIdentificacion> getTipoDocumentoIdentificacions() {
         return this.tipoDocumentoIdentificacions;

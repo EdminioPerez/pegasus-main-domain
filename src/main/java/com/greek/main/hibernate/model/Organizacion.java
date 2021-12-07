@@ -1,8 +1,7 @@
 package com.greek.main.hibernate.model;
-// Generated 10 jul. 2021 0:09:56 by Hibernate Tools 3.2.2.GA and Assent Architecture
+// Generated 7 dic. 2021 10:22:07 by Hibernate Tools 3.2.2.GA and Assent Architecture
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.gvt.core.domain.types.Auditable;
 import com.gvt.core.domain.types.Cleanable;
 import com.gvt.core.domain.types.Fillable;
@@ -454,7 +453,7 @@ public class Organizacion  implements Versionable,Seleccionable,Identificable,Fi
     public void setNombreResponsable(String nombreResponsable) {
         this.nombreResponsable = nombreResponsable;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="organizacion")
     public Set<PropiedadesSistema> getPropiedadesSistemas() {
         return this.propiedadesSistemas;
@@ -463,7 +462,7 @@ public class Organizacion  implements Versionable,Seleccionable,Identificable,Fi
     public void setPropiedadesSistemas(Set<PropiedadesSistema> propiedadesSistemas) {
         this.propiedadesSistemas = propiedadesSistemas;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="organizacionByIdOrganizacion")
     public Set<UsuarioOrganizacion> getUsuarioOrganizacionsForIdOrganizacion() {
         return this.usuarioOrganizacionsForIdOrganizacion;
@@ -472,7 +471,7 @@ public class Organizacion  implements Versionable,Seleccionable,Identificable,Fi
     public void setUsuarioOrganizacionsForIdOrganizacion(Set<UsuarioOrganizacion> usuarioOrganizacionsForIdOrganizacion) {
         this.usuarioOrganizacionsForIdOrganizacion = usuarioOrganizacionsForIdOrganizacion;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="organizacion")
     public Set<PersonaOrganizacion> getPersonaOrganizacions() {
         return this.personaOrganizacions;
@@ -481,7 +480,7 @@ public class Organizacion  implements Versionable,Seleccionable,Identificable,Fi
     public void setPersonaOrganizacions(Set<PersonaOrganizacion> personaOrganizacions) {
         this.personaOrganizacions = personaOrganizacions;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="organizacionByIdSede")
     public Set<UsuarioOrganizacion> getUsuarioOrganizacionsForIdSede() {
         return this.usuarioOrganizacionsForIdSede;
@@ -490,7 +489,7 @@ public class Organizacion  implements Versionable,Seleccionable,Identificable,Fi
     public void setUsuarioOrganizacionsForIdSede(Set<UsuarioOrganizacion> usuarioOrganizacionsForIdSede) {
         this.usuarioOrganizacionsForIdSede = usuarioOrganizacionsForIdSede;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="organizacion")
     public Set<Organizacion> getOrganizacions() {
         return this.organizacions;
@@ -499,7 +498,7 @@ public class Organizacion  implements Versionable,Seleccionable,Identificable,Fi
     public void setOrganizacions(Set<Organizacion> organizacions) {
         this.organizacions = organizacions;
     }
-	@JsonIgnore
+	//@JsonIgnore
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="organizacionByIdSedeDefault")
     public Set<UsuarioOrganizacion> getUsuarioOrganizacionsForIdSedeDefault() {
         return this.usuarioOrganizacionsForIdSedeDefault;

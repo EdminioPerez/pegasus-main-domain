@@ -116,7 +116,7 @@ public class CustomReverseStrategy extends DelegatingReverseEngineeringStrategy 
 		extraImports.addValue("org.springframework.data.jpa.domain.support.AuditingEntityListener");
 
 //		extraImports.addValue("javax.xml.bind.annotation.XmlTransient");
-		extraImports.addValue("com.fasterxml.jackson.annotation.JsonIgnore");
+//		extraImports.addValue("com.fasterxml.jackson.annotation.JsonIgnore");
 //		extraImports.addValue("org.springframework.security.core.context.SecurityContextHolder");
 //		extraImports.addValue("org.springframework.security.core.userdetails.User");
 
