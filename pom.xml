@@ -14,7 +14,7 @@
 	<artifactId>pegasus-main-domain</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	
+
 	<name>pegasus-main-domain</name>
 
 	<properties>
