@@ -1,6 +1,6 @@
 /* AssentSoftware (C)2021 */
 package com.greek.main.hibernate.model;
-// Generated 7 dic. 2021 10:22:07 by Hibernate Tools 3.2.2.GA and Assent Architecture
+// Generated 14 dic. 2021 22:42:55 by Hibernate Tools 3.2.2.GA and Assent Architecture
 
 import com.gvt.core.domain.types.Auditable;
 import com.gvt.core.domain.types.Cleanable;
